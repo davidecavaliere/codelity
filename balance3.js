@@ -1,7 +1,5 @@
 var start = process.hrtime();
 
-
-
 // you can use console.log for debugging purposes, i.e.
 // console.log('this is a debug message');
 
@@ -9,7 +7,7 @@ function solution(X, A) {
     // write your code in JavaScript (Node.js 0.12)
     var n = A.length;
 
-    console.log(A, 'X', X);
+    // console.log(A, 'X', X);
     if (n<=1) return -1;
 
     var middle = Math.floor(A.length/2) - 1;
@@ -34,8 +32,8 @@ function solution(X, A) {
         if(r!==X) rs++;
       });
 
-      console.log('L', L, 'ls', ls);
-      console.log('R', R, 'rs', rs);
+      // console.log('L', L, 'ls', ls);
+      // console.log('R', R, 'rs', rs);
 
       if (ls<rs) { middle ++ } else { middle--}
       balanced = ls === rs;
@@ -46,39 +44,6 @@ function solution(X, A) {
     // quicker under normal circumstances
 
     return middle;
-
-    //
-    // console.log(A, 'balancing ', X);
-    // var n = A.length;
-    // var lc = [];
-    // var rc = [];
-    // var balancer = [];
-    //
-    // var xCount = 0;
-    // var notXCount = 0;
-    // A.forEach(function(a, i) {
-    //
-    //   if (a===X) {
-    //     xCount++;
-    //   }
-    //   lc[i] = xCount;
-    //
-    //   if (A[n-1-i]!==X) {
-    //     notXCount++;
-    //   }
-    //   rc[n-1-i] = notXCount;
-    //
-    // });
-    // console.log(lc);
-    // console.log(rc);
-    //
-    // A.forEach(function(a, i) {
-    //
-    //   balancer[i] = rc[i] - lc[i];
-    // });
-    //
-    // console.log(balancer);
-
 }
 
 var A = [];
@@ -106,6 +71,13 @@ var B = [5,1,0,5,3,1,7,5];
 console.log('5,1,0,5,3,1,7,5 exptected 4 got', solution(5, B));
 console.log('more complex expected 8', solution(5, A.concat(B)));
 
+var input = [];
+var needle = Math.floor(Math.random() * (1000 - 0));
+for (var i=0; i<=10000; i++) {
+  input[i] = Math.floor(Math.random() * (1000 - 0)) + 0;
+}
+//
+console.log('caotic big sequence with needle', needle, ' - ', solution(needle, input));
 
 
 var end = process.hrtime(start);
