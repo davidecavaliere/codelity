@@ -20,25 +20,29 @@ function solution(A) {
     console.log('area ', area);
 
     for (var i in A) {
-      var elm = A[i];
-      var column = [];
-      for (var j=0; j<=elm; j++) {
-        column[j] = 1;
-      }
-
-      for (var j=elm+1; j<=maxHeight; j++) {
-        column[j] = 0;
-      }
-
-      matrix[i] = column;
 
     }
 
-    var cornerStone = matrix[1,1];
-
-
-
-    console.log(matrix);
+    // for (var i in A) {
+    //   var elm = A[i];
+    //   var column = [];
+    //   for (var j=0; j<=elm; j++) {
+    //     column[j] = 1;
+    //   }
+    //
+    //   for (var j=elm+1; j<=maxHeight; j++) {
+    //     column[j] = 0;
+    //   }
+    //
+    //   matrix[i] = column;
+    //
+    // }
+    //
+    // var cornerStone = matrix[1,1];
+    //
+    //
+    //
+    // console.log(matrix);
 
     return 7;
 }

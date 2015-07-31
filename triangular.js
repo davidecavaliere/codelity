@@ -73,10 +73,13 @@ function solution(A) {
     */
     for (var i in A) {
       var pivot = A[i];
-      A.sort(function(previousElm,currentElm) {
-        console.log('previousElm ', previousElm);
-        console.log('currentElm', currentElm);
-      });
+      for (var j=i+1; j<n; j++) {
+
+        A.sort(function(previousElm,currentElm) {
+          console.log('previousElm ', previousElm);
+          console.log('currentElm', currentElm);
+        });
+      }
     }
 
 }
