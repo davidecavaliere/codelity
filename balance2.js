@@ -122,7 +122,7 @@ console.log('very long test please wait');
 
 var input = [];
 var needle = Math.floor(Math.random() * (1000 - 0));
-for (var i=0; i<=10000; i++) {
+for (var i=0; i<=100000; i++) {
   input[i] = Math.floor(Math.random() * (1000 - 0)) + 0;
 }
 //

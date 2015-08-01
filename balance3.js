@@ -73,7 +73,7 @@ console.log('more complex expected 8', solution(5, A.concat(B)));
 
 var input = [];
 var needle = Math.floor(Math.random() * (1000 - 0));
-for (var i=0; i<=10000; i++) {
+for (var i=0; i<=100000; i++) {
   input[i] = Math.floor(Math.random() * (1000 - 0)) + 0;
 }
 //
